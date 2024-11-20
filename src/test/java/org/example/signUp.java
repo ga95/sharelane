@@ -15,13 +15,13 @@ public class signUp {
         driver.get("https://sharelane.com/cgi-bin/register.py");
         driver.findElement(By.name("zip_code")).sendKeys( "12345");
         driver.findElement(By.cssSelector("[value='Continue']")).click();
-        driver.findElement(By.xpath( "//input[@name='first_name']")).sendKeys("Ruslan");
-        driver.findElement(By.xpath("//input[@name='last_name']")).sendKeys( "Mazitov");
-        driver.findElement(By.xpath( "//input[@name='email']")).sendKeys("mazitov@mail.ru");
-        driver.findElement(By.xpath( "//input[@name 'password1']")).sendKeys("12345678");
-        driver.findElement(By.xpath( "//input[@name='password2']")).sendKeys("12345678");
+        driver.findElement(By.name("first_name")).sendKeys("Andrey");
+        driver.findElement(By.name("email")).sendKeys("ga95@mail.ru");
+        driver.findElement(By.name("password1")).sendKeys("1234566");
+        driver.findElement(By.name("password2")).sendKeys("1234566");
         driver.findElement(By.cssSelector("[value = 'Register']")).click();
-        boolean elementOnPage = driver.findElement(By.cssSelector(".confirmation_message")).isDisplayed(); Assert.assertTrue (elementOnPage);
+        boolean elementOnPage = driver.findElement(By.cssSelector(".confirmation_message")).isDisplayed();
+        Assert.assertTrue(elementOnPage);
         driver.quit();
 
 
